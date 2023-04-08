@@ -1,0 +1,29 @@
+<h2>Product Form</h2>
+<form (ngSubmit)="save()">
+    <div>
+        <label for="name">Name:</label>
+        <input id="name" [(ngModel)]="product.name" name="name" required>
+    </div>
+    <div>
+        <label for="description">Description:</label>
+        <input id="description" [(ngModel)]="product.description" name="description">
+    </div>
+
+
+
+
+    <div>
+        <label for="price">Price:</label>
+        <input id="price" [(ngModel)]="product.price" name="price" required>
+    </div>
+    <div>
+        <label for="category">Category:</label>
+        <select id="category" [(ngModel)]="product.categoryId" name="categoryId">
+            <option *ngFor="let category of categories" [value]="category.id">
+                {{ category.name }}
+            </option>
+        </select>
+    </div>
+    <button type="submit">Save</button>
+    <button type="button" (click)="back()">Cancel</button>
+</form>

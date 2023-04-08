@@ -8,6 +8,8 @@ import { HomeComponent } from './public/pages/home/home.component';
 import { ShopComponent } from './public/pages/shop/shop.component';
 
 import { PublicComponent } from './public/public.component';
+import { CategoriesListComponent } from './admin/pages/categories/categories-list/categories-list.component';
+import { ProductsListComponent } from './admin/pages/products/products-list/products-list.component';
 
 const routes: Routes = [
     {
@@ -21,6 +23,8 @@ const routes: Routes = [
     {
         path: 'admin', component: AdminComponent, children: [
             { path: 'dashboard', component: DashboardComponent },
+            { path: 'categories', component: CategoriesListComponent },
+            { path: 'products', component: ProductsListComponent },
         ]
     },
 ];
