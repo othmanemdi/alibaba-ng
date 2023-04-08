@@ -10,6 +10,8 @@ import { ShopComponent } from './public/pages/shop/shop.component';
 import { PublicComponent } from './public/public.component';
 import { CategoriesListComponent } from './admin/pages/categories/categories-list/categories-list.component';
 import { ProductsListComponent } from './admin/pages/products/products-list/products-list.component';
+import { ProductDetailsComponent } from './admin/pages/products/product-details/product-details.component';
+import { ProductFormComponent } from './admin/pages/products/product-form/product-form.component';
 
 const routes: Routes = [
     {
@@ -25,6 +27,8 @@ const routes: Routes = [
             { path: 'dashboard', component: DashboardComponent },
             { path: 'categories', component: CategoriesListComponent },
             { path: 'products', component: ProductsListComponent },
+            { path: 'products/:id', component: ProductDetailsComponent },
+            { path: 'products/:id/form', component: ProductFormComponent },
         ]
     },
 ];
